@@ -1,0 +1,41 @@
+# deps
+node_modules
+**/node_modules
+
+# next
+.next
+**/.next
+out
+**/out
+
+# build
+dist
+**/dist
+coverage
+**/coverage
+
+# sessao whatsapp
+auth_info_jarvis
+auth_info
+
+# runtime
+data
+logs
+*.log
+
+# backups
+*.bak
+*.bak[0-9]
+backup-*.sql
+backups-db/
+
+# env
+.env
+.env.*
+!.env.example
+
+# certs / chaves
+*.pem
+*.key
+nginx/certs/*.pem
+nginx/certs/*.key

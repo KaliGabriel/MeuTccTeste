@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* DIA (light) */
+  :root {
+    color-scheme: light;
+    --background: 0 0% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 221 83% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 33% 95%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 40%;
+    --accent: 217 90% 95%;
+    --accent-foreground: 224 76% 33%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 221 83% 50%;
+    --radius: 0.75rem;
+  }
+
+  /* NOITE (dark) */
+  .dark {
+    color-scheme: dark;
+    --background: 222 30% 7%;
+    --foreground: 210 40% 98%;
+    --card: 222 28% 10%;
+    --card-foreground: 210 40% 98%;
+    --primary: 217 91% 65%;
+    --primary-foreground: 222 47% 6%;
+    --secondary: 217 25% 16%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 25% 14%;
+    --muted-foreground: 215 15% 58%;
+    --accent: 217 50% 20%;
+    --accent-foreground: 213 94% 70%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 25% 18%;
+    --input: 217 25% 18%;
+    --ring: 217 91% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.35);
+  border-radius: 3px;
+}
